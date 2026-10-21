@@ -1,9 +1,10 @@
 # Seating Chart Simulator
+
 ## Core Gameplay Loop
- - Overview
+- Overview
     - The goal of the game is to make a perfect seating chart in as little days as possible. 
         - A perfect seating chart consist of having no students talk to each other at all. 
- - Loop
+- Loop
     - Title-Card pops up "Edit Seating Chart" (On the first day the students will be randomly placed initially).
     - At the beginning of every day you are able to make changes to the seating chart. You can move students and look at any notes you have written.
         - The notes are written on a clip-board that is visible at all times
@@ -14,9 +15,17 @@
     - This transitions to the watching stage which lasts one minute each day.
         - The watching stage consists of watching students behaviour and taking notes on what you have seen.
     - After a minute has passed a title-card pops up that says "Day Over".
+
 ## Development
-  - Unity (Game Engine)
-  - FL Studio (Music and Sound Effects)
-  - Aseprite (Artwork)
+
+- ### Tools Used
+    - Unity (Game Engine)
+    - FL Studio (Music and Sound Effects)
+    - Aseprite (Artwork)
+
+- ### Project Resources
+    - [Development Logs](Devlogs/)
+    - [FL Studio Projects](FLStudio/)
+
 ## Credits
 - Created by Walker Allen (WalkerSheep) 
