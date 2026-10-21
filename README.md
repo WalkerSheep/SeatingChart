@@ -18,14 +18,15 @@
 
 ## Development
 
-- ### Tools Used
+### Tools Used
     - Unity (Game Engine)
     - FL Studio (Music and Sound Effects)
     - Aseprite (Artwork)
 
-- ### Project Resources
+### Project Resources
     - [Development Logs](Devlogs/)
     - [FL Studio Projects](FLStudio/)
+    - [Aseprite Files](Assets/Sprites)
 
 ## Credits
 - Created by Walker Allen (WalkerSheep) 
