@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "GameActions",
+    "maps": [
+        {
+            "name": "All",
+            "id": "fd183298-1f84-4c6b-92e9-69eb123da688",
+            "actions": [
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "0aaae26c-cb09-4d38-8c2d-d9d865cfb1ad",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cd0fa0b5-00bd-45fb-a2d8-f3de8b3db23e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
