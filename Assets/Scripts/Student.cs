@@ -5,17 +5,21 @@ using UnityEngine;
 public class Student
 {
     public string name = "";
-    public Sprite body, face;
+    public Sprite body, face, hat;
     public Color bodyColor = Color.white;
     public float shyness = 0;
     [System.NonSerialized]
     public List<Student> friends = new List<Student>();
 
-    public Student(string name, Sprite body, Sprite face, Color bodyColor, float shyness)
+    public Student(string name, Sprite body, Sprite face, Sprite hat, Color bodyColor, float shyness)
     {
         this.name = name;
         this.body = body;
         this.face = face;
+        if(hat != null)
+        {
+            this.hat = hat;
+        }
         this.bodyColor = bodyColor;
         this.shyness = shyness;
     }

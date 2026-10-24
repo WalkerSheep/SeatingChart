@@ -6,7 +6,7 @@ public class StudentController : MonoBehaviour
     public static StudentController instance;
 
     public TextAsset studentFirstNames, studentLastNames;
-    public Sprite[] bodySprites, faceSprites;
+    public Sprite[] bodySprites, faceSprites, hats;
     public Color[] bodyColors = {Color.white};
 
     public GameObject studentPrefab;
@@ -18,7 +18,7 @@ public class StudentController : MonoBehaviour
     void Awake()
     {
         instance = this;
-        
+
         students.Clear();
     }
 
@@ -31,7 +31,12 @@ public class StudentController : MonoBehaviour
     {
         for (int i = 0; i < seats.Length; i++)
         {
-            Student student = new Student(RandomName(studentFirstNames) + " " + RandomName(studentLastNames), RandomSprite(bodySprites), RandomSprite(faceSprites), RandomColor(bodyColors), Random.Range(0.5f, 5f));
+            Sprite hat = null;
+            if(Random.Range(0, 2) == 1)
+            {
+                hat = RandomSprite(hats);
+            }
+            Student student = new Student(RandomName(studentFirstNames) + " " + RandomName(studentLastNames), RandomSprite(bodySprites), RandomSprite(faceSprites), hat, RandomColor(bodyColors), Random.Range(0.5f, 5f));
             StudentObject studentObject = Instantiate(studentPrefab).GetComponent<StudentObject>();
             studentObject.name = "Student (" + student.name + ")";
             studentObject.Initialize(student);

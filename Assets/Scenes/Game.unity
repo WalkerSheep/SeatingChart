@@ -404,6 +404,12 @@ MonoBehaviour:
   - {fileID: -1965845853, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
   - {fileID: -1619422742, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
   - {fileID: 1339351570, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
+  hats:
+  - {fileID: 1290412655, guid: 164b99d9193e56a40a1da43177dcb3dc, type: 3}
+  - {fileID: 604455082, guid: 164b99d9193e56a40a1da43177dcb3dc, type: 3}
+  - {fileID: 509153025, guid: 164b99d9193e56a40a1da43177dcb3dc, type: 3}
+  - {fileID: -842124694, guid: 164b99d9193e56a40a1da43177dcb3dc, type: 3}
+  - {fileID: 600152907, guid: 164b99d9193e56a40a1da43177dcb3dc, type: 3}
   bodyColors:
   - {r: 0.9150943, g: 0.34100214, b: 0.34100214, a: 1}
   - {r: 1, g: 0.616603, b: 0.23113209, a: 1}
