@@ -41,7 +41,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Trail
+  - name: Student
     uniqueID: 1146770297
     locked: 0
   m_RenderingLayers:

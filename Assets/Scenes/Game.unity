@@ -200,7 +200,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.26211727, g: 0.78616345, b: 0.1508048, a: 0}
+  m_BackGroundColor: {r: 0.27144888, g: 0.9433962, b: 0.69259626, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -341,7 +341,11 @@ MonoBehaviour:
         m_SelectedSource:
           rid: -2
         m_Provider2DCache:
-          rid: -2
+          rid: 2255080219367964767
+    - rid: 2255080219367964767
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -357,9 +361,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &885142422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 885142424}
+  - component: {fileID: 885142423}
+  m_Layer: 0
+  m_Name: StudentController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &885142423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885142422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429c79d63b39cd142b0142329b00b7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  studentFirstNames: {fileID: 4900000, guid: 3802cb800574d6343b378706d4cfee1a, type: 3}
+  studentLastNames: {fileID: 4900000, guid: 575d61f519f54d247a9fe164a601de03, type: 3}
+  bodySprites:
+  - {fileID: -4756613722035035531, guid: 50651864a62210e4786edf594646fbcc, type: 3}
+  - {fileID: -4526852047868628351, guid: 50651864a62210e4786edf594646fbcc, type: 3}
+  - {fileID: -652613799949362139, guid: 50651864a62210e4786edf594646fbcc, type: 3}
+  - {fileID: 2658333674282579425, guid: 50651864a62210e4786edf594646fbcc, type: 3}
+  - {fileID: 723637425108740393, guid: 50651864a62210e4786edf594646fbcc, type: 3}
+  faceSprites:
+  - {fileID: 1337051830, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
+  - {fileID: -1687911718, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
+  - {fileID: -1965845853, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
+  - {fileID: -1619422742, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
+  - {fileID: 1339351570, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
+  bodyColors:
+  - {r: 0.9150943, g: 0.34100214, b: 0.34100214, a: 1}
+  - {r: 0.49982047, g: 0.8679245, b: 0.3725525, a: 1}
+  - {r: 0.51998043, g: 0.8962264, b: 0.8780039, a: 1}
+  - {r: 0.87559557, g: 0.4764151, b: 1, a: 1}
+  - {r: 1, g: 0.616603, b: 0.23113209, a: 1}
+  studentPrefab: {fileID: 6537918372524932957, guid: e96ab0593f5e72d4f8f52d47078cb3be, type: 3}
+  students: []
+--- !u!4 &885142424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885142422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 885142424}
