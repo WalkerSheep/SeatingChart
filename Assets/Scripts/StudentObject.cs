@@ -9,11 +9,6 @@ public class StudentObject : MonoBehaviour
     public SpriteRenderer bodyRenderer, faceRenderer;
     public TextMeshProUGUI nameTag;
 
-    void Awake()
-    {
-        
-    }
-
     public void OnEnable()
     {
         

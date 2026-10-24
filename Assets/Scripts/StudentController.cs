@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class StudentController : MonoBehaviour
 {
+    public static StudentController instance;
+
     public TextAsset studentFirstNames, studentLastNames;
     public Sprite[] bodySprites, faceSprites;
     public Color[] bodyColors = {Color.white};
@@ -15,6 +17,8 @@ public class StudentController : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
+        
         students.Clear();
     }
 
