@@ -9,6 +9,8 @@ public class StudentController : MonoBehaviour
 
     public GameObject studentPrefab;
 
+    public Transform[] seats;
+
     public List<Student> students = new List<Student>();
 
     void Awake()
@@ -18,16 +20,19 @@ public class StudentController : MonoBehaviour
 
     void Start()
     {
-        GenerateStudents(20);
+        GenerateStudents();
     }
 
-    public void GenerateStudents(int amount)
+    public void GenerateStudents()
     {
-        for (int i = 0; i < amount; i++)
+        for (int i = 0; i < seats.Length; i++)
         {
             Student student = new Student(RandomName(studentFirstNames) + " " + RandomName(studentLastNames), RandomSprite(bodySprites), RandomSprite(faceSprites), RandomColor(bodyColors), Random.Range(0.5f, 5f));
             StudentObject studentObject = Instantiate(studentPrefab).GetComponent<StudentObject>();
+            studentObject.name = "Student (" + student.name + ")";
             studentObject.Initialize(student);
+            studentObject.transform.SetParent(seats[i]);
+            studentObject.transform.localPosition = new Vector3(0,0,0);
             students.Add(student);
         }
     }

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1146770297
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4756613722035035531, guid: 50651864a62210e4786edf594646fbcc, type: 3}
@@ -240,6 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8043273381511581051}
   - component: {fileID: 13964642121381960}
+  - component: {fileID: 3136115613154533641}
   m_Layer: 0
   m_Name: Student
   m_TagString: Untagged
@@ -279,6 +280,19 @@ MonoBehaviour:
   bodyRenderer: {fileID: 4146202434278068586}
   faceRenderer: {fileID: 195326787792164096}
   nameTag: {fileID: 2352788168054494643}
+--- !u!210 &3136115613154533641
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537918372524932957}
+  m_Enabled: 1
+  m_SortingLayerID: 1146770297
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &6753457248043860385
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +349,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
@@ -355,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 64
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
@@ -460,7 +474,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1146770297
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1337051830, guid: 7cbbfe3b83b878c408566580e76ab236, type: 3}
