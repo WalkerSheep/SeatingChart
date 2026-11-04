@@ -24,6 +24,7 @@ public class StudentController : MonoBehaviour
 
     public void GenerateStudents()
     {
+        students.Clear();
         for (int i = 0; i < seats.Length; i++)
         {
             Sprite hat = null;
