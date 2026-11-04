@@ -10,7 +10,17 @@ public class Student
     public float shyness = 0;
     [System.NonSerialized]
     public List<Student> friends = new List<Student>();
-
+    public List<string> friendNames = new List<string>();
+    
+    public Student()
+    {
+        name = "";
+        body = null;
+        face = null;
+        hat = null;
+        bodyColor = Color.white;
+        shyness = 0;
+    }
     public Student(string name, Sprite body, Sprite face, Sprite hat, Color bodyColor, float shyness)
     {
         this.name = name;
@@ -26,7 +36,18 @@ public class Student
 
     public void AddFriend(Student friend)
     {
-        friends.Add(friend);
+        if(friend != null && friend != this)
+        {
+            if(!friends.Contains(friend))
+            {
+                friends.Add(friend);
+                friendNames.Add(friend.name);
+            }
+            if(!friend.friends.Contains(this))
+            {
+                friend.AddFriend(this);
+            }
+        }
     }
 }
 

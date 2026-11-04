@@ -13,18 +13,13 @@ public class StudentController : MonoBehaviour
 
     public Transform[] seats;
 
-    public List<Student> students = new List<Student>();
+    public static List<Student> students = new List<Student>();
 
     void Awake()
     {
         instance = this;
 
         students.Clear();
-    }
-
-    void Start()
-    {
-        GenerateStudents();
     }
 
     public void GenerateStudents()
@@ -43,6 +38,23 @@ public class StudentController : MonoBehaviour
             studentObject.transform.SetParent(seats[i]);
             studentObject.transform.localPosition = new Vector3(0,0,0);
             students.Add(student);
+        }
+
+        RandomizeStudentFriends(students);
+    }
+
+    private void RandomizeStudentFriends(List<Student> students)
+    {
+        foreach (Student student in students)
+        {
+            int friendCount = Random.Range(1, 4);
+
+            for (int i = 0; i < friendCount; i++)
+            {
+                Student randomStudent = students[Random.Range(0, students.Count)];
+
+                student.AddFriend(randomStudent);
+            }
         }
     }
 

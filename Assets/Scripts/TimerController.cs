@@ -17,11 +17,6 @@ public class TimerController : MonoBehaviour
         timer = 0;
     }
 
-    void Start()
-    {
-        StartTimer();
-    }
-
     void Update()
     {
         if(timer > 0 && countingDown)
