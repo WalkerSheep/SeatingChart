@@ -200,8 +200,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287954846
-  m_fontColor: {r: 0.61986756, g: 1, b: 0.5801887, a: 1}
+    rgba: 4291525725
+  m_fontColor: {r: 0.3647059, g: 0.48627454, b: 0.7960785, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

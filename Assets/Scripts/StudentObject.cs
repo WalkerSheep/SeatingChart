@@ -28,6 +28,11 @@ public class StudentObject : MonoBehaviour, IInteractable
         {
             talkTimer = data.shyness;
         }
+
+        if(transform.parent != null)
+        {
+            transform.position = Vector3.Lerp(transform.position, transform.parent.position, 5 * Time.deltaTime);
+        }
     }
 
     public void Initialize(Student data)
@@ -60,6 +65,18 @@ public class StudentObject : MonoBehaviour, IInteractable
     public void OnMouseClick()
     {
         Debug.Log(data.name);
+        if(GameController.instance.changingChart)
+        {
+            if(SeatingController.instance.selectedStudent == null)
+            {
+                SeatingController.instance.selectedStudent = this;
+            }
+            else if(SeatingController.instance.selectedStudent != this)
+            {
+                SeatingController.instance.SwapStudents(this);
+            }
+
+        }
     }
 
     public void OnMouseRelease()
