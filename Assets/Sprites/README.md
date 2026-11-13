@@ -9,9 +9,15 @@
 
     ### [Student Hats (Aseprite)](Student/Student_Hats.aseprite)
     ![Student Hats](Student/Student_Hats-Sheet.png)
+
 - ## [Seat](Seat)
     ### [Seat (Aseprite)](Seat/Seat.aseprite)
     ![Seat](Seat/Seat.png)
+
 - ## [Table](Table)
     ### [Table (Aseprite)](Table/Table.aseprite)
     ![Table](Table/Table.png)
+
+- ## [Tiles](Tiles)
+    ### [Tile Floor (Aseprite)](Tiles/Tile_Floor.aseprite)
+    ![Tile Floor](Tiles/Tile_Floor.png)
