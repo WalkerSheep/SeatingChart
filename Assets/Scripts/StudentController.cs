@@ -11,20 +11,33 @@ public class StudentController : MonoBehaviour
 
     public GameObject studentPrefab;
 
-    public Transform[] seats;
+    public Seat[] seats;
 
     public static List<Student> students = new List<Student>();
+
+    public static Dictionary<int, Student> studentSeats = new Dictionary<int, Student>();
 
     void Awake()
     {
         instance = this;
+    }
 
-        students.Clear();
+    public void PlaceStudents()
+    {
+        for (int i = 0; i < seats.Length; i++)
+        {
+            StudentObject studentObject = Instantiate(studentPrefab).GetComponent<StudentObject>();
+            studentObject.name = studentSeats[i].name + " (Student)";
+            studentObject.Initialize(studentSeats[i]);
+            studentObject.transform.SetParent(seats[i].transform);
+            studentObject.transform.localPosition = new Vector3(0,0,0);
+        }
     }
 
     public void GenerateStudents()
     {
         students.Clear();
+        studentSeats.Clear();
         for (int i = 0; i < seats.Length; i++)
         {
             Sprite hat = null;
@@ -32,16 +45,29 @@ public class StudentController : MonoBehaviour
             {
                 hat = RandomSprite(hats);
             }
-            Student student = new Student(RandomName(studentFirstNames) + " " + RandomName(studentLastNames), RandomSprite(bodySprites), RandomSprite(faceSprites), hat, RandomColor(bodyColors), Random.Range(0.5f, 5f));
-            StudentObject studentObject = Instantiate(studentPrefab).GetComponent<StudentObject>();
-            studentObject.name = student.name + " (Student)";
-            studentObject.Initialize(student);
-            studentObject.transform.SetParent(seats[i]);
-            studentObject.transform.localPosition = new Vector3(0,0,0);
+            Student student = new Student(RandomName(studentFirstNames) + " " + RandomName(studentLastNames), RandomSprite(bodySprites), RandomSprite(faceSprites), hat, RandomColor(bodyColors), Random.Range(2.5f, 10f));
             students.Add(student);
+            studentSeats.Add(i, student);
         }
 
         RandomizeStudentFriends(students);
+    }
+
+    void Update()
+    {
+        UpdateStudentSeats();
+    }
+
+    void UpdateStudentSeats()
+    {
+        studentSeats.Clear();
+        for (int i = 0; i < seats.Length; i++)
+        {
+            if(seats[i].studentObject)
+            {
+                studentSeats.Add(i, seats[i].studentObject.data);
+            }
+        }
     }
 
     private void RandomizeStudentFriends(List<Student> students)

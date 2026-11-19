@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
         {
             StudentController.instance.GenerateStudents();
         }
+        StudentController.instance.PlaceStudents();
         yield return new WaitUntil(() => confirm.action.WasPressedThisFrame());
         gameState = GameState.ViewingStudents;
         changingChartHolder.gameObject.SetActive(false);

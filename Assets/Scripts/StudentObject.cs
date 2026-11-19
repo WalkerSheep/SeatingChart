@@ -27,33 +27,30 @@ public class StudentObject : MonoBehaviour, IInteractable
         animator = GetComponent<Animator>();
         talkTimer = 0;
     }
-
-    IEnumerator Start()
-    {
-        yield return new WaitUntil(() => TimerController.instance.countingDown);
-        talkTimer = data.shyness;
-    }
     void Update()
     {
         seat = transform.parent.GetComponent<Seat>();
-        if(state == State.Idle)
+        if(GameController.instance.viewingStudents)
         {
-            if(talkTimer > 0)
+            if(state == State.Idle)
             {
-                talkTimer -= Time.deltaTime;
+                if(talkTimer > 0)
+                {
+                    talkTimer -= Time.deltaTime;
+                }
+                else
+                {
+                    foreach (Seat seat in seat.neighboringSeats)
+                    {
+                        AttemptTalk(seat.studentObject);
+                    }
+                    talkTimer = data.shyness;
+                }
             }
             else
             {
-                foreach (Seat seat in seat.neighboringSeats)
-                {
-                    AttemptTalk(seat.studentObject);
-                }
                 talkTimer = data.shyness;
             }
-        }
-        else
-        {
-            talkTimer = data.shyness;
         }
 
         if(transform.parent != null)
