@@ -6,11 +6,9 @@ public class Seat : MonoBehaviour
     public List<Seat> neighboringSeats = new List<Seat>();
     public StudentObject studentObject;
 
-    public void Update()
+    public void UpdateStudent()
     {
-        if(!studentObject)
-        {
-            studentObject = GetComponentInChildren<StudentObject>();
-        }
+        studentObject = GetComponentInChildren<StudentObject>();
+        studentObject.UpdateSeat();
     }
 }

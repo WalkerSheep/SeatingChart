@@ -27,9 +27,14 @@ public class StudentObject : MonoBehaviour, IInteractable
         animator = GetComponent<Animator>();
         talkTimer = 0;
     }
-    void Update()
+
+    public void UpdateSeat()
     {
         seat = transform.parent.GetComponent<Seat>();
+    }
+
+    void Update()
+    {
         if(GameController.instance.viewingStudents)
         {
             if(state == State.Idle)
@@ -123,12 +128,18 @@ public class StudentObject : MonoBehaviour, IInteractable
 
     public void OnMouseEnter()
     {
-        
+        if(!SeatingController.instance.hover)
+        {
+            SeatingController.instance.hover = transform;
+        }
     }
 
     public void OnMouseExit()
     {
-        
+        if(SeatingController.instance.hover == transform)
+        {
+            SeatingController.instance.hover = null;
+        }
     }
 
     public void OnMouseClick()

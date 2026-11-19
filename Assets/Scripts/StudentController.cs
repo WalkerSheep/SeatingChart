@@ -32,6 +32,8 @@ public class StudentController : MonoBehaviour
             studentObject.transform.SetParent(seats[i].transform);
             studentObject.transform.localPosition = new Vector3(0,0,0);
         }
+
+        SeatingChanged();
     }
 
     public void GenerateStudents()
@@ -51,11 +53,6 @@ public class StudentController : MonoBehaviour
         }
 
         RandomizeStudentFriends(students);
-    }
-
-    void Update()
-    {
-        UpdateStudentSeats();
     }
 
     void UpdateStudentSeats()
@@ -99,5 +96,14 @@ public class StudentController : MonoBehaviour
     public Color RandomColor(Color[] colors)
     {
         return colors[Random.Range(0, colors.Length)];
+    }
+
+    public void SeatingChanged()
+    {
+        foreach (Seat seat in seats)
+        {
+            seat.UpdateStudent();
+        }
+        UpdateStudentSeats();
     }
 }
