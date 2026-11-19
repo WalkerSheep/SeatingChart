@@ -10,6 +10,8 @@ public class SeatingController : MonoBehaviour
 
     public Transform hover;
 
+    public bool snap = true;
+
     void Awake()
     {
         instance = this;
@@ -29,7 +31,14 @@ public class SeatingController : MonoBehaviour
     {
         if(hover)
         {
-            selection.transform.position = hover.transform.position;
+            if(snap)
+            {
+                selection.transform.position = hover.transform.position; 
+            }
+            else
+            {
+                selection.transform.position = Vector3.Lerp(selection.transform.position, hover.transform.position, 10 * Time.deltaTime); 
+            }    
         }
         selection.SetBool("Visible", hover);
     }

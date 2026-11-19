@@ -19,8 +19,8 @@ public class StudentObject : MonoBehaviour, IInteractable
 
     private Animator animator;
 
-    const float REGULAR_CHANCE = 20;
-    const float FRIEND_CHANCE = 50;
+    const float REGULAR_CHANCE = 10;
+    const float FRIEND_CHANCE = 75;
 
     void Awake()
     {
@@ -70,7 +70,7 @@ public class StudentObject : MonoBehaviour, IInteractable
     {
         state = State.Talking;
         CancelInvoke(nameof(SetOff));
-        Invoke(nameof(SetOff), 2);
+        Invoke(nameof(SetOff), 2.5f);
     }
 
     private void SetOff()
@@ -128,17 +128,23 @@ public class StudentObject : MonoBehaviour, IInteractable
 
     public void OnMouseEnter()
     {
-        if(!SeatingController.instance.hover)
+        if(GameController.instance.changingChart)
         {
-            SeatingController.instance.hover = transform;
+            if(!SeatingController.instance.hover)
+            {
+                SeatingController.instance.hover = transform;
+            }
         }
     }
 
     public void OnMouseExit()
     {
-        if(SeatingController.instance.hover == transform)
+        if(GameController.instance.changingChart)
         {
-            SeatingController.instance.hover = null;
+            if(SeatingController.instance.hover == transform)
+            {
+                SeatingController.instance.hover = null;
+            }
         }
     }
 
