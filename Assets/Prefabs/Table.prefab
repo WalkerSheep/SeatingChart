@@ -169,6 +169,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3007288244825283441}
     m_Modifications:
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: neighboringSeats.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4622418310489344471}
     - target: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -223,6 +231,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
   m_PrefabInstance: {fileID: 4343344940152233133}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4009820122800781747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+  m_PrefabInstance: {fileID: 4343344940152233133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4642f89b9dd440adccc1a3408452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &5459831594203868361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,6 +250,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3007288244825283441}
     m_Modifications:
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: neighboringSeats.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6298093150874598988}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4009820122800781747}
     - target: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -280,6 +311,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+--- !u!114 &4622418310489344471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+  m_PrefabInstance: {fileID: 5459831594203868361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4642f89b9dd440adccc1a3408452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &6437825506224817722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
@@ -293,6 +335,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3007288244825283441}
     m_Modifications:
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: neighboringSeats.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8318219200015387777}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4622418310489344471}
     - target: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -347,6 +401,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
   m_PrefabInstance: {fileID: 6666529507751500626}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6298093150874598988 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+  m_PrefabInstance: {fileID: 6666529507751500626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4642f89b9dd440adccc1a3408452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &8688384125536774559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,6 +420,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3007288244825283441}
     m_Modifications:
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: neighboringSeats.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8249726974873835648}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6298093150874598988}
     - target: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -409,6 +486,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
   m_PrefabInstance: {fileID: 8688384125536774559}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8318219200015387777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+  m_PrefabInstance: {fileID: 8688384125536774559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4642f89b9dd440adccc1a3408452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &8764002571172150686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +505,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3007288244825283441}
     m_Modifications:
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: neighboringSeats.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+      propertyPath: 'neighboringSeats.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8318219200015387777}
     - target: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -471,3 +567,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1338404546527046387, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
   m_PrefabInstance: {fileID: 8764002571172150686}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8249726974873835648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 856553772384740638, guid: bea0f828725a6d04e8fff2f9f28d7e06, type: 3}
+  m_PrefabInstance: {fileID: 8764002571172150686}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac4642f89b9dd440adccc1a3408452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

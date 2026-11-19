@@ -14,12 +14,18 @@ public class StudentObject : MonoBehaviour, IInteractable
     public bool talking;
     private float talkTimer = 0;
 
+    public Seat seat;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
     }
     void Update()
     {
+        if(!seat)
+        {
+            seat = transform.parent.GetComponent<Seat>();
+        }
         if(talkTimer > 0)
         {
             talkTimer -= Time.deltaTime;

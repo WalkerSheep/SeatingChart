@@ -34,7 +34,7 @@ public class StudentController : MonoBehaviour
             }
             Student student = new Student(RandomName(studentFirstNames) + " " + RandomName(studentLastNames), RandomSprite(bodySprites), RandomSprite(faceSprites), hat, RandomColor(bodyColors), Random.Range(0.5f, 5f));
             StudentObject studentObject = Instantiate(studentPrefab).GetComponent<StudentObject>();
-            studentObject.name = "Student (" + student.name + ")";
+            studentObject.name = student.name + " (Student)";
             studentObject.Initialize(student);
             studentObject.transform.SetParent(seats[i]);
             studentObject.transform.localPosition = new Vector3(0,0,0);
