@@ -151,6 +151,11 @@ public class StudentObject : MonoBehaviour, IInteractable
     public void OnMouseClick()
     {
         Debug.Log(data.name);
+        Click();
+    }
+
+    public void Click()
+    {
         if(GameController.instance.changingChart)
         {
             if(SeatingController.instance.selectedStudent == null)
@@ -161,7 +166,6 @@ public class StudentObject : MonoBehaviour, IInteractable
             {
                 SeatingController.instance.SwapStudents(this);
             }
-
         }
     }
 
