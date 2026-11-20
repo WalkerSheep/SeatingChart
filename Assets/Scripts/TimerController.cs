@@ -1,5 +1,7 @@
+
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimerController : MonoBehaviour
 {
@@ -9,12 +11,15 @@ public class TimerController : MonoBehaviour
     public float timer = 0;
     public TextMeshProUGUI timerDisplay;
 
+    public bool done;
+
     void Awake()
     {
         instance = this;
 
         countingDown = false;
         timer = 0;
+        done = false;
     }
 
     void Update()
@@ -22,19 +27,25 @@ public class TimerController : MonoBehaviour
         if(timer > 0 && countingDown)
         {
             timer -= Time.deltaTime;
-        }
-        else
-        {
-            timer = 0;
+
+            if(timer <= 0)
+            {
+                timer = 0;
+                countingDown = false;
+                done = true;
+
+                SceneManager.LoadScene("Game");
+            }
         }
 
         timerDisplay.text = timer.ToString("F2");
     }
 
-    public void StartTimer(float startTime = 60f)
+    public void StartTimer(float startTime = 30f)
     {
         timer = startTime;
         countingDown = true;
+        done = false;
     }
 
     public void PauseTimer()
