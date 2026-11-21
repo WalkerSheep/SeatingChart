@@ -10,14 +10,13 @@ public class StartController : MonoBehaviour
 
     public bool pressed;
 
+    public TextAnimation startTextAnimation;
+
     public InputActionReference confirm;
 
     void Start()
     {
         pressed = false;
-        GameController.day = 0;
-        StudentController.students.Clear();
-        StudentController.studentSeats.Clear();
         highScoreTextbox.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0);
     }
 
@@ -28,9 +27,21 @@ public class StartController : MonoBehaviour
             if(confirm.action.WasPressedThisFrame())
             {
                 pressed = true;
-                SceneManager.LoadScene("Game");
+                startTextAnimation.waveSpeedMultiplier = 2;
+                startTextAnimation.waveHeightMultiplier = 5;
+                startTextAnimation.waveSpacingMultiplier = 2;
+                Invoke(nameof(LoadGame), 1);
             }
         }
+    }
+
+    void LoadGame()
+    {
+        GameController.day = 0;
+        StudentController.students.Clear();
+        StudentController.studentSeats.Clear();
+
+        SceneManager.LoadScene("Game");
     }
 
     void OnEnable()
