@@ -66,6 +66,11 @@ public class StudentObject : MonoBehaviour, IInteractable
         Animation();
     }
 
+    public void Squish()
+    {
+        animator.SetTrigger("Squish");
+    }
+
     public void StartTalking()
     {
         state = State.Talking;
@@ -158,6 +163,7 @@ public class StudentObject : MonoBehaviour, IInteractable
     {
         if(GameController.instance.changingChart)
         {
+            Squish();
             if(SeatingController.instance.selectedStudent == null)
             {
                 SeatingController.instance.selectedStudent = this;
