@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
             StudentController.instance.GenerateStudents();
         }
         StudentController.instance.PlaceStudents();
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(3);
         dayScreen.SetActive(false);
         gameState = GameState.ChangingChart;
         yield return new WaitUntil(() => !start.action.IsPressed());

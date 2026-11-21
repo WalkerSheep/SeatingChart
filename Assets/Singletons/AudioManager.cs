@@ -194,9 +194,6 @@ public class AudioManager : MonoBehaviour
 
         musicSource.clip = null;
         musicSourceTwo.clip = null;
-
-        musicSource.time = 0f;
-        musicSourceTwo.time = 0f;
     }
 
     public void PauseMusic()

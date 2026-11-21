@@ -27,10 +27,11 @@ public class StartController : MonoBehaviour
             if(confirm.action.WasPressedThisFrame())
             {
                 pressed = true;
+                AudioManager.instance.StopMusic();
                 startTextAnimation.waveSpeedMultiplier = 2;
                 startTextAnimation.waveHeightMultiplier = 5;
                 startTextAnimation.waveSpacingMultiplier = 2;
-                Invoke(nameof(LoadGame), 1);
+                LoadGame();
             }
         }
     }
@@ -41,7 +42,8 @@ public class StartController : MonoBehaviour
         StudentController.students.Clear();
         StudentController.studentSeats.Clear();
 
-        SceneManager.LoadScene("Game");
+        FaderController.instance.scene = "Game";
+        FaderController.instance.FadeOut(FaderController.instance.ChangeScene, 2);
     }
 
     void OnEnable()
