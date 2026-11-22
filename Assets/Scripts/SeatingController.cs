@@ -15,6 +15,8 @@ public class SeatingController : MonoBehaviour
     public StudentObject selectedStudent;
 
     public Animator selection;
+    public Animator marker;
+    public LineRenderer line;
     public Transform hover;
 
     public SeatLane[] lanes;
@@ -59,6 +61,24 @@ public class SeatingController : MonoBehaviour
 
     void Update()
     {
+        line.enabled = selectedStudent;
+        if(selectedStudent)
+        {
+            line.SetPosition(0, selectedStudent.transform.position);
+            if(hover)
+            {
+                line.SetPosition(1, Vector3.Lerp(line.GetPosition(1), hover.transform.position, 50 * Time.deltaTime));
+            }
+            else
+            {
+                line.SetPosition(1, Vector3.Lerp(line.GetPosition(1), InputController.instance.mousePosition, 50 * Time.deltaTime));
+            }
+        }
+        marker.SetBool("Visible", selectedStudent);
+        if(selectedStudent)
+        {
+            marker.transform.position = selectedStudent.transform.position + new Vector3(0,1f,0);
+        }
         if(controllerConnected)
         {
             if(GameController.instance.changingChart && ValidSeat())

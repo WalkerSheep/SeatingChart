@@ -47,6 +47,9 @@ TagManager:
   - name: Table
     uniqueID: 2634406475
     locked: 0
+  - name: Line
+    uniqueID: 392543539
+    locked: 0
   - name: Student
     uniqueID: 1146770297
     locked: 0

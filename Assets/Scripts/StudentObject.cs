@@ -166,7 +166,12 @@ public class StudentObject : MonoBehaviour, IInteractable
             Squish();
             if(SeatingController.instance.selectedStudent == null)
             {
+                SeatingController.instance.line.SetPosition(1, transform.position);
                 SeatingController.instance.selectedStudent = this;
+            }
+            else if(SeatingController.instance.selectedStudent == this)
+            {
+                SeatingController.instance.selectedStudent = null;
             }
             else if(SeatingController.instance.selectedStudent != this)
             {
