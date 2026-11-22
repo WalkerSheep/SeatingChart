@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public bool changingChart => gameState == GameState.ChangingChart;
     public bool viewingStudents => gameState == GameState.ViewingStudents;
 
+    public GameObject speechBubblePrefab;
+
     public InputActionReference confirm;
     public InputActionReference start;
     public GameObject changingChartHolder;
@@ -60,5 +62,13 @@ public class GameController : MonoBehaviour
     {
         confirm.action.Disable();
         start.action.Disable();
+    }
+
+    public void SpawnSpeechBubble(StudentObject student1, StudentObject student2)
+    {
+        GameObject spawned = ObjectPoolController.instance.SpawnObject(speechBubblePrefab, (student1.transform.position + student2.transform.position) / 2f, Quaternion.Euler(0,0,0));
+        SpeechBubble speechBubble = spawned.GetComponent<SpeechBubble>();
+        speechBubble.student1 = student1;
+        speechBubble.student2 = student2;
     }
 }

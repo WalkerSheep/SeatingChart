@@ -50,6 +50,9 @@ TagManager:
   - name: Line
     uniqueID: 392543539
     locked: 0
+  - name: SpeechBubble
+    uniqueID: 1498338755
+    locked: 0
   - name: Student
     uniqueID: 1146770297
     locked: 0

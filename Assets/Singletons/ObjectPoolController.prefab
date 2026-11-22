@@ -47,3 +47,5 @@ MonoBehaviour:
   objectPool:
   - amount: 100
     prefab: {fileID: 7082253014049239734, guid: 1a28e54ec53fa6449975737ee8da8116, type: 3}
+  - amount: 20
+    prefab: {fileID: 2934636772073793974, guid: e42efb20fb244cf43a3f725eafb2119d, type: 3}

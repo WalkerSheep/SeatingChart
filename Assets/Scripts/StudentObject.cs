@@ -91,6 +91,7 @@ public class StudentObject : MonoBehaviour, IInteractable
             {
                 studentObject.StartTalking();
                 StartTalking();
+                GameController.instance.SpawnSpeechBubble(this, studentObject);
             }
         }
         else
@@ -99,6 +100,7 @@ public class StudentObject : MonoBehaviour, IInteractable
             {
                 studentObject.StartTalking();
                 StartTalking();
+                GameController.instance.SpawnSpeechBubble(this, studentObject);
             }
         }
     }
